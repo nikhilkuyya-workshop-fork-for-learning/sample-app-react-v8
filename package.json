@@ -1,0 +1,11 @@
+{
+  "name": "react-v8",
+  "packageManager": "yarn@3.6.4",
+  "volta": {
+    "node": "18.18.2",
+    "yarn": "3.6.4"
+  },
+  "devDependencies": {
+    "prettier": "^3.0.3"
+  }
+}
