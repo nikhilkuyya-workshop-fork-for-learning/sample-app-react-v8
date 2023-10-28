@@ -1,5 +1,6 @@
-"use strict";
-console.log("hello script");
+import React from 'react'
+import { createRoot } from 'react-dom'
+
 const App = () =>
   React.createElement("main", {}, [
     React.createElement("h1", {}, "Adopt Me!"),
@@ -28,12 +29,8 @@ const Pet = (props) => {
     React.createElement("h3", {}, breed),
   ]);
 };
-function boot() {
-  if (!window.React || !window.ReactDOM) {
-    return;
-  }
-  const container = document.querySelector("#root");
-  const root = ReactDOM.createRoot(container);
-  const AppElement = React.createElement(App, {}, null);
-  root.render(AppElement);
-}
+const container = document.querySelector("#root");
+const root = createRoot(container);
+const AppElement = React.createElement(App, {}, null);
+root.render(AppElement);
+
