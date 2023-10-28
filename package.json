@@ -5,10 +5,13 @@
     "node": "18.18.2",
     "yarn": "3.6.4"
   },
+  "workspaces": [
+    "sample-apps/*"
+  ],
   "scripts": {
     "typecheck": "yarn tsc",
     "format": "yarn prettier --write \"src/**/*.{js,ts,jsx,tsx}\"",
-    "lint": "yarn eslint src --ext js,ts,tsx,jsx",
+    "lint": "yarn eslint src --fix --ext js,ts,tsx,jsx --quiet ",
     "build": "yarn vite build",
     "dev": "yarn vite",
     "preview": "yarn vite preview"
@@ -21,12 +24,15 @@
     "@vitejs/plugin-react": "^4.1.0",
     "eslint": "^8.52.0",
     "eslint-config-prettier": "^9.0.0",
-    "eslint-plugin-react": "latest",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-react": "^7.33.2",
     "prettier": "^3.0.3",
-    "typescript": "5.3.0-beta",
+    "typescript": "^5.2.2",
     "vite": "^4.5.0"
   },
   "dependencies": {
+    "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   }

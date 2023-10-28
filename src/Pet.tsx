@@ -1,6 +1,5 @@
-import React from 'react';
+const Pet = (props: { name: string, animal: string, breed: string}): JSX.Element => {
 
-const Pet = (props) => {
   console.log("pet", { props });
   const { name, animal, breed } = props;
   return (<section>

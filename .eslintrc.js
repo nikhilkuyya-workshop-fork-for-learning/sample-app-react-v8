@@ -8,6 +8,7 @@ module.exports = {
 		'plugin:@typescript-eslint/recommended',
 		'plugin:@typescript-eslint/recommended-requiring-type-checking',
 		'plugin:react/recommended',
+		'plugin:jsx-a11y/recommended',
 		'prettier',
 	],
 	overrides: [
@@ -39,8 +40,18 @@ module.exports = {
 		sourceType: 'module',
 	},
 	plugins: [
+		'import',
+		'jsx-a11y',
 		'@typescript-eslint',
 		'react',
 	],
-	rules: {},
+	rules: {
+		'react/prop-types': 0,
+		'react/react-in-jsx-scope': 0,
+	},
+	settings: {
+		react: {
+			version: 'detect',
+		},
+	},
 };
