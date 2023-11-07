@@ -1,6 +1,6 @@
 const NoStateSearchParams = () => {
   const location = "test";
-  // to test thre renders
+  // to test the rerenders
   console.log("hi, nostate searchParms");
   return (
     <div>
