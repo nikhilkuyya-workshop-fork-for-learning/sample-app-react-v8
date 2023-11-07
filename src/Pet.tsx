@@ -1,4 +1,10 @@
-const Pet = (props: { name: string, animal: string, breed: string}): JSX.Element => {
+type PetProps = {
+  name: string;
+  animal: string;
+  breed: string;
+}
+
+const Pet = (props: PetProps): JSX.Element => {
 
   console.log("pet", { props });
   const { name, animal, breed } = props;
@@ -9,4 +15,3 @@ const Pet = (props: { name: string, animal: string, breed: string}): JSX.Element
     </section>);
 };
 export default Pet;
-

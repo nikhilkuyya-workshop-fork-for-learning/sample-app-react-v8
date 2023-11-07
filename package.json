@@ -11,7 +11,7 @@
   "scripts": {
     "typecheck": "yarn tsc",
     "format": "yarn prettier --write \"src/**/*.{js,ts,jsx,tsx}\"",
-    "lint": "yarn eslint src --fix --ext js,ts,tsx,jsx --quiet ",
+    "lint": "yarn eslint src --ext .js,.jsx,.ts,.tsx --fix --quiet ",
     "build": "yarn vite build",
     "dev": "yarn vite",
     "preview": "yarn vite preview"
@@ -27,6 +27,7 @@
     "eslint-plugin-import": "^2.29.0",
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "prettier": "^3.0.3",
     "typescript": "^5.2.2",
     "vite": "^4.5.0"

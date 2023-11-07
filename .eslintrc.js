@@ -5,10 +5,12 @@ module.exports = {
 	},
 	extends: [
 		'eslint:recommended',
+		'plugin:import/errors',
 		'plugin:@typescript-eslint/recommended',
 		'plugin:@typescript-eslint/recommended-requiring-type-checking',
 		'plugin:react/recommended',
 		'plugin:jsx-a11y/recommended',
+		'plugin:react-hooks/recommended',
 		'prettier',
 	],
 	overrides: [
@@ -43,6 +45,7 @@ module.exports = {
 		'import',
 		'jsx-a11y',
 		'@typescript-eslint',
+		'react-hooks',
 		'react',
 	],
 	rules: {
@@ -52,6 +55,9 @@ module.exports = {
 	settings: {
 		react: {
 			version: 'detect',
+		},
+		'import/resolver': {
+			node: {extensions: ['.js', '.ts', '.jsx', '.tsx']},
 		},
 	},
 };
